@@ -6,6 +6,7 @@ for num in range(0, 100):
             output += "0{:d}, ".format(num)
         else:
             output += "{:d}, ".format(num)
-        if output == 99:
+        if num == 99:
+            output += output.rstrip(', ')
             output += '\n'
 print(output)
