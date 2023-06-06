@@ -8,5 +8,4 @@ for num in range(0, 100):
             output += "{:d}, ".format(num)
         if num == 99:
             output += output.rstrip(', ')
-            output += '\n'
 print(output)
