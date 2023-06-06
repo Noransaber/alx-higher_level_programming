@@ -7,5 +7,5 @@ for num in range(0, 100):
         else:
             output += "{:d}, ".format(num)
         if num == 99:
-            output += output.rstrip(', ')
+            output = output.rstrip(', ')
 print(output)
