@@ -2,7 +2,7 @@
 if __name__ == "__main__":
 
     from calculator_1 import add, sub, div, mul
-    """print the result from the different calculation processes"""
+    """give the result from the different calculation processes"""
     a = 10
     b = 5
     print("{} + {} = {}".format(a, b, add(a, b)))
