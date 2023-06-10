@@ -10,4 +10,4 @@ def multiple_returns(sentence):
         tuple2 = tuple1 + (sentence[0],)
         return tuple2
     else:
-        return None, None
+        return (0, None)
