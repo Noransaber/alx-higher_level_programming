@@ -1,0 +1,64 @@
+How you can use 0-add_integer.py
+=======================
+Thi modules define how can you use add_integer(a, b=98) function
+
+Usage
+====
+if you want to add two integers, function return the addition of two numbers
+
+import
+====
+>>> add_integer = __import__('0-add_integer').add_integer
+
+test
+===
+
+>>> add_integer(2,3)
+5
+
+>>> add_integer(1,2)
+3
+
+>>> add_integer(2, -3)
+-2
+
+Floating values
+==========
+>>> add_integer(2.00, 3.00)
+5
+
+Floating and non Floating
+==================
+
+>>> add_integer(2.3, -3)
+-1
+
+Second args is98 by defult
+=================
+>>> add_integer(2)
+100
+
+NonNumbers
+=========
+It will raise type error that it is not a number and we excpect a number
+
+>>> add_integer("hello", 3)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(2, "hello")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer(None):
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(2.3, None):
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+TypeError message will print for the frist argument if both of them not a number or float
+
+
+
