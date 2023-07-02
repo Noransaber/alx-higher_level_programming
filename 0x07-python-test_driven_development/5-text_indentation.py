@@ -1,6 +1,15 @@
 #!/usr/bin/python3
-def text_indentation(text):
+""" Define the function """
 
+
+def text_indentation(text):
+    """ print test with two new line if the ., ?, : exist
+
+    args:
+        text
+    Raises:
+        TypeError: if text is not a string
+    """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
