@@ -11,14 +11,6 @@ class Rectangle:
         width: int
         height: init
 
-        Method:
-        Area: Calculate are
-        Perimeter: Calaculate it
-
-        Raise:
-        TypeError: if not int
-        ValueError: if negative
-
         """
         self.height = height
         self.width = width
@@ -63,7 +55,6 @@ class Rectangle:
 
     def __str__(self):
         """Return the pritable representation of the retangle
-
         represent retangel with #
         """
         if self.__width == 0 or self.__height == 0:
