@@ -54,8 +54,8 @@ class Rectangle:
         return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-        """Return the pritable representation of the retangle
-        represent retangel with #
+        """Return the printable representation of the rectangle
+        represent rectangel with #
         """
         if self.width == 0 or self.height == 0:
             return("")
