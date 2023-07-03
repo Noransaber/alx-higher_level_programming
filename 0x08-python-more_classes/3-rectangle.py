@@ -8,7 +8,6 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         """Init a new retangle
         Args:
-        ===
         width: int
         height: init
 
