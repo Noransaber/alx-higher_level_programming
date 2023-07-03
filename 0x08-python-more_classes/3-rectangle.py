@@ -6,7 +6,7 @@ class Rectangle:
     """Define a class"""
 
     def __init__(self, width=0, height=0):
-        """Init a new retangle
+        """Start a new retangle
         Args:
         width: int
         height: init
@@ -62,7 +62,7 @@ class Rectangle:
 
         r = []
         for i in range(self.height):
-            [r.append('#') for k in range(self.__width)]
-            if i != self.__height - 1:
+            [r.append('#') for k in range(self.width)]
+            if i != self.height - 1:
                 r.append("\n")
         return ("".join(r))
