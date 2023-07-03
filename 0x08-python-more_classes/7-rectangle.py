@@ -30,7 +30,7 @@ class Rectangle:
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
-            raise TypeError("width must be >= 0")
+            raise ValueError("width must be >= 0")
         self.__width = value
 
     @property
@@ -65,7 +65,7 @@ class Rectangle:
             return ("")
 
         r = []
-        for i in range(self.__heighy):
+        for i in range(self.__height):
             [r.append(str(self.print_symbol)) for n in range(self.__width)]
             if i != self.__height - 1:
                 r.append("\n")
