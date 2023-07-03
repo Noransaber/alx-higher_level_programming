@@ -57,11 +57,11 @@ class Rectangle:
         """Return the pritable representation of the retangle
         represent retangel with #
         """
-        if self.__width == 0 or self.__height == 0:
+        if self.width == 0 or self.height == 0:
             return("")
 
         r = []
-        for i in range(self.__height):
+        for i in range(self.height):
             [r.append('#') for k in range(self.__width)]
             if i != self.__height - 1:
                 r.append("\n")
