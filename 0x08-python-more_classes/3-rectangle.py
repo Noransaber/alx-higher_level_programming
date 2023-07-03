@@ -45,12 +45,12 @@ class Rectangle:
 
     def area(self):
         """ Return the area of the retangel"""
-        return (self.__width * self.__height)
+        return self.__width * self.__height
 
     def perimeter(self):
         """Return the perimeter of the retangle"""
         if self.__width == 0 or self.__height == 0:
-            return (0)
+            return 0
         return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
@@ -58,11 +58,11 @@ class Rectangle:
         represent rectangel with #
         """
         if self.width == 0 or self.height == 0:
-            return("")
+            return ""
 
         r = []
         for i in range(self.height):
             [r.append('#') for k in range(self.width)]
             if i != self.height - 1:
                 r.append("\n")
-        return ("".join(r))
+        return "".join(r)
