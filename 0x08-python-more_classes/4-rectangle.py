@@ -29,7 +29,6 @@ class Rectangle:
             raise TypeError("width must be >= 0")
         self.__width = value
 
-
     @property
     def height(self):
         """Get height"""
@@ -45,25 +44,31 @@ class Rectangle:
         self.__height = value
 
     def area(self):
+        """Return the are of the retangle"""
         return (self.__width * self.__height)
 
     def perimeter(self):
+        """Return the perimeter of the retangle"""
         if self.__width == 0 or self.__height == 0:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
+        """Return the printable representation of the retangle
+        Represent the retangle with #
+        """
         if self.__width == 0 or self.__height == 0:
             return ("")
 
         r = []
         for i in range(self.__height):
-            [r.append('#') for n in  range(self.__width)]
+            [r.append('#') for n in range(self.__width)]
             if i != self.__height - 1:
                 r.append("\n")
         return ("".join(r))
 
     def __repr__(self):
+        """Return the string representation of the retangle"""
         r = "Rectangle(" + str(self.__width)
         r += ", " + str(self.__height) + ")"
         return (r)
