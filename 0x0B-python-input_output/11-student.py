@@ -1,29 +1,20 @@
-#!/usr/bin/python3
-"""Define a class"""
-
-
 class Student:
-    """Start a new class"""
-
     def __init__(self, first_name, last_name, age):
-        """init a new class
-        Args:
-        firstname: string
-        lastname: string
-        age: int
-        """
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
     def to_json(self, attrs=None):
-        """Return describtion about the class"""
         if attrs is None:
             attrs = []
-        if (type(attrs) == list and all(type(ele) == str for ele in attrs)):
-            return {n: getattr(self, n) for n in attrs if hasattr(self, n)}
-        return self.__dict__
+        elif not isinstance(attrs, list):
+            raise TypeError("attrs must be a list")
+        elif not all(isinstance(attr, str) for attr in attrs):
+            raise TypeError("attrs must contain only strings")
+        return {attr: getattr(self, attr) for attr in attrs}
 
     def reload_from_json(self, json):
+        if not isinstance(json, dict):
+            raise TypeError("json must be a dictionary")
         for k, v in json.items():
             setattr(self, k, v)
