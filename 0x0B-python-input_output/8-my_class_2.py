@@ -1,9 +1,3 @@
-<class '8-my_class.MyClass'>
-[MyClass] John - 89
-<class 'dict'>
-{'name': 'John', 'number': 89}
-guillaume@ubuntu:~/0x0B$ 
-guillaume@ubuntu:~/0x0B$ cat 8-my_class_2.py 
 #!/usr/bin/python3
 """ My class module
 """
@@ -27,4 +21,3 @@ class MyClass:
 
     def __str__(self):
         return "[MyClass] {} - {:d} => {:d}".format(self.__name, self.number, self.score)
-
