@@ -18,6 +18,8 @@ class Student:
 
     def to_json(self, attrs=None):
         """Return describtion about the class"""
+        if attrs is None:
+            attrs = []
         if (type(attrs) == list and all(type(ele) == str for ele in attrs)):
             return {n: getattr(self, n) for n in attrs if hasattr(self, n)}
         return self.__dict__
