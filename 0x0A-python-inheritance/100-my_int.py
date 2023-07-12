@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Deines a calss"""
 
+
 class MyInt(int):
     """invert int operators"""
 
