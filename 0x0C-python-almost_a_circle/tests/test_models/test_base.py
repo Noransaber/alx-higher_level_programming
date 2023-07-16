@@ -10,24 +10,24 @@ import unittest
 
 
 class TestBaseMethods(unittest.TestCase):
-    """ Test Base class """
+    """ BASE CLASS TESTING"""
 
     def setUp(self):
-        """ method for each test """
+        """ EACH TEST METOD TESING """
         Base._Base__nb_objects = 0
 
     def test_id(self):
-        """ Test id """
+        """ ID TESTING """
         new = Base(1)
         self.assertEqual(new.id, 1)
 
     def test_id_default(self):
-        """ Test def id """
+        """ ID TESTING """
         new = Base()
         self.assertEqual(new.id, 1)
 
     def test_id_nb_objects(self):
-        """ Test nb obj attr """
+        """ NB OBJ ATTR TESTING"""
         new = Base()
         new2 = Base()
         new3 = Base()
@@ -36,7 +36,7 @@ class TestBaseMethods(unittest.TestCase):
         self.assertEqual(new3.id, 3)
 
     def test_id_mix(self):
-        """ Test nb obj attr and assigned id"""
+        """ NB IBJ ATTR AND IS TESTING"""
         new = Base()
         new2 = Base(1024)
         new3 = Base()
@@ -45,17 +45,17 @@ class TestBaseMethods(unittest.TestCase):
         self.assertEqual(new3.id, 2)
 
     def test_string_id(self):
-        """ Test str id """
+        """ ID STR TESTING"""
         new = Base('1')
         self.assertEqual(new.id, '1')
 
     def test_more_args_id(self):
-        """ Test passing more than onearg to init method """
+        """ MORE THAN ONE ARG PASSING TESTING """
         with self.assertRaises(TypeError):
             new = Base(1, 1)
 
     def test_access_private_attrs(self):
-        """ Test accessing to private attr """
+        """ ACCESSING PRIVATE ATTR TESTING"""
         new = Base()
         with self.assertRaises(AttributeError):
             new.__nb_objects
@@ -79,7 +79,7 @@ class TestBaseMethods(unittest.TestCase):
             self.assertEqual(file.read(), "[]")
 
     def test_save_to_file_2(self):
-        """ Test JSON file """
+        """ KSON FILE TESTING"""
         Rectangle.save_to_file(None)
         res = "[]\n"
         with open("Rectangle.json", "r") as file:
