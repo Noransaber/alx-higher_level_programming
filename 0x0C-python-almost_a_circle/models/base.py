@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Define a class"""
 import json
-
+import os.path
 
 class Base:
     __nb_objects = 0

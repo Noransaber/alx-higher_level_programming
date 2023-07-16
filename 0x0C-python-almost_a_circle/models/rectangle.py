@@ -95,12 +95,13 @@ class Rectangle(Base):
             print("")
 
     def __str__(self):
-        str_rectangle = "[Rectangle] "
+        """ str method """
+        str_rect = "[Rectangle] "
         str_id = "({}) ".format(self.id)
         str_xy = "{}/{} - ".format(self.x, self.y)
-        str_wh = "{}/{}".format(self.width, self.height)
+        str_w = "{}/{}".format(self.width, self.height)
 
-        return str_rectangle + str_id + str_xy + str_wh
+        return str_rect + str_id + str_xy + str_w
 
     def update(self, *args, **kwargs):
         """Update the rectangle
@@ -112,7 +113,7 @@ class Rectangle(Base):
         4th argument should be the x attribute
         5th argument should be the y attribute
         """
-        if args not None and len(args) not 0:
+        if args is not None and len(args) != 0:
             list_atr = ['id', 'width', 'height', 'x', 'y']
             for i in range(len(args)):
                 setattr(self, list_atr[i], args[i])
@@ -128,4 +129,4 @@ class Rectangle(Base):
         for key in list_atr:
             dict_res[key] = getattr(self, key)
 
-            return dict_res
+        return dict_res

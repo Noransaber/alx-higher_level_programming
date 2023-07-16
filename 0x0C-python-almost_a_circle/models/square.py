@@ -19,13 +19,13 @@ class Square(Rectangle):
 
     
     def __str__(self):
-        """Str special method"""
-        str_sq = "[Square]"
-        str_id "({}) ".format(self.id)
-        str_xy = "{}/{} - ".foramt(self.x, self.y)
+        """ str special method """
+        str_s = "[Square] "
+        str_id = "({}) ".format(self.id)
+        str_xy = "{}/{} - ".format(self.x, self.y)
         str_w = "{}/{}".format(self.width, self.height)
 
-        return str_sq + str_id + str_xy +  str_w
+        return str_s + str_id + str_xy + str_w
 
     @property
     def size(self):
@@ -39,13 +39,13 @@ class Square(Rectangle):
         self.height = value
 
     def __str__(self):
-        """str method"""
-        str_rec = "[Square]"
-        str_id = "({})".format(self.id)
+        """ str special method """
+        str_rectangle = "[Square] "
+        str_id = "({}) ".format(self.id)
         str_xy = "{}/{} - ".format(self.x, self.y)
-        str_sz = "{}".format(self.size)
+        str_size = "{}".format(self.size)
 
-        return  str_rec + str_id + str_xy + str_sz
+        return str_rectangle + str_id + str_xy + str_size
 
     def update(self, *args, **kwargs):
         """Update the square
@@ -57,14 +57,14 @@ class Square(Rectangle):
                 - 4th argument represents y attribute
             **kwargs (dict): New key/value pairs of attributes
         """
-        if args is not None and len(args) not 0:
+        if args is not None and len(args) != 0:
             lst_atr = ['id', 'size', 'x', 'y']
             for i in range(len(args)):
-                if lst_str[i] == 'size':
+                if lst_atr[i] == 'size':
                     setattr(self, 'width', args[i])
                     setattr(self, 'height', args[i])
                 else:
-                    setattr(self, lst_attr[i], args[i])
+                    setattr(self, lst_atr[i], args[i])
         else:
             for key, value in kwargs.items():
                 if key == 'size':
@@ -84,4 +84,4 @@ class Square(Rectangle):
             else:
                 dict_re[key] = getattr(self, key)
 
-            return dict_re
+        return dict_re
