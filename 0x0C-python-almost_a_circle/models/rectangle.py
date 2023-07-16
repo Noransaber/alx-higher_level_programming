@@ -56,7 +56,7 @@ class Rectangle(Base):
         """Set/Update the x value"""
         if type(value) != int:
             raise TypeError("x must be an integer")
-        if value <= 0:
+        if value < 0:
             raise ValueError("x must be >= 0")
         self.__x = value
 
@@ -70,7 +70,7 @@ class Rectangle(Base):
         """Set/Update the y value"""
         if type(value) != int:
             raise TypeError("y must be an integer")
-        if value <= 0:
+        if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
 
@@ -112,9 +112,7 @@ class Rectangle(Base):
 
             for arg in args:
                 if a == 0:
-                    if arg is None:
-                        self.__init__(self.width, self.height, self.x, self.y)
-                    else:
+                    if arg is not None:
                         self.id = arg
                 elif a == 1:
                     self.width = arg
@@ -129,9 +127,7 @@ class Rectangle(Base):
         elif kwargs and len(kwargs) != 0:
             for k, v in kwargs.items():
                 if k == "id":
-                    if v is None:
-                        self.__init__(self.width, self.height, self.x, self.y)
-                    else:
+                    if v is not None:
                         self.id = v
                 elif k == "width":
                     self.width = v
