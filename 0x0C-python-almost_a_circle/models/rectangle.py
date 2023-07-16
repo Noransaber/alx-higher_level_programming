@@ -54,7 +54,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """Set/Update the x value"""
-        if type(value) != int:
+        if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
@@ -76,7 +76,7 @@ class Rectangle(Base):
 
     def area(self):
         """Return the area of the rectangle"""
-        return self.__width * self.__height
+        return self.width * self.height
 
     def display(self):
         """
@@ -95,7 +95,12 @@ class Rectangle(Base):
             print("")
 
     def __str__(self):
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
+        str_rectangle = "[Rectangle] "
+        str_id = "({}) ".format(self.id)
+        str_xy = "{}/{} - ".format(self.x, self.y)
+        str_wh = "{}/{}".format(self.width, self.height)
+
+        return str_rectangle + str_id + str_xy + str_wh
 
     def update(self, *args, **kwargs):
         """Update the rectangle
@@ -107,43 +112,20 @@ class Rectangle(Base):
         4th argument should be the x attribute
         5th argument should be the y attribute
         """
-        if args and len(args) != 0:
-            a = 0
-
-            for arg in args:
-                if a == 0:
-                    if arg is not None:
-                        self.id = arg
-                elif a == 1:
-                    self.width = arg
-                elif a == 2:
-                    self.height = arg
-                elif a == 3:
-                    self.x = arg
-                elif a == 4:
-                    self.y = arg
-                a += 1
-
-        elif kwargs and len(kwargs) != 0:
-            for k, v in kwargs.items():
-                if k == "id":
-                    if v is not None:
-                        self.id = v
-                elif k == "width":
-                    self.width = v
-                elif k == "height":
-                    self.height = v
-                elif k == "x":
-                    self.x = v
-                elif k == "y":
-                    self.y = v
+        if args not None and len(args) not 0:
+            list_atr = ['id', 'width', 'height', 'x', 'y']
+            for i in range(len(args)):
+                setattr(self, list_atr[i], args[i])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def to_dictionary(self):
         """Return dic representation of the rectangle"""
-        return {
-                "id": self.id,
-                "width": self.width,
-                "height": self.height,
-                "x": self.x,
-                "y": self.y
-                }
+        list_atr = ['id', 'width', 'height', 'x', 'y']
+        dict_res = {}
+
+        for key in list_atr:
+            dict_res[key] = getattr(self, key)
+
+            return dict_res

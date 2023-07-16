@@ -16,7 +16,7 @@ class Base:
         if id is not None:
             self.id = id
         else:
-            self.__nb_objects += 1
+            Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
     @staticmethod
@@ -24,10 +24,9 @@ class Base:
         """returns the JSON string
         representation of list_dictionaries:
         """
-        if list_dictionaries is None or list_dictionaries == []:
+        if list_dictionaries is None or list_dictionaries == "[]":
             return "[]"
-        else:
-            return json.dumps(list_dictionaries)
+        return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
@@ -35,7 +34,7 @@ class Base:
         representation of list_objs
         to a file:
         """
-        filename = cls.__name__ + ".json"
+        filename = "{}.json".format(cls.__name__)
         with open(filename, "w") as jf:
             if list_objs is None:
                 jf.write("[]")
@@ -50,7 +49,7 @@ class Base:
         string representation
         json_string
         """
-        if json_string is None or json_string == []:
+        if json_string is None or json_string == "[]":
             return []
         return json.loads(json_string)
 
@@ -63,21 +62,27 @@ class Base:
 
         if dictionary and dictionary != {}:
             if cls.__name__ == "Rectangle":
-                new = cls(1, 1)
+                new = cls(10, 10)
             else:
-                new = cls(1)
+                new = cls(10)
             new.update(**dictionary)
             return new
 
     @classmethod
     def load_from_file(cls):
         """ returns a list of instances"""
-        fn = str(cls.__name__) + ".json"
-        try:
-            with open(fn, "r") as f:
-                list_dicts = Base.from_json_string(f.read())
-                return [cls.create(**d) for d in list_dicts]
-        except IOError:
+        filename = "{}.json".format(cls.__name__)
+
+        if os.path.exists(filename) is False:
             return []
-        except Exception:
-            return []
+
+        with open(filename, 'r') as f:
+            list_str = f.read()
+
+        list_cls = cls.from_json_string(list_str)
+        li_ins = []
+
+        for index in range(len(list_cls)):
+            li_ins.append(cls.create(**list_cls[index]))
+
+        return li_ins

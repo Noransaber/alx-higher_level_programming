@@ -17,6 +17,16 @@ class Square(Rectangle):
         """
         super().__init__(size, size, x, y, id)
 
+    
+    def __str__(self):
+        """Str special method"""
+        str_sq = "[Square]"
+        str_id "({}) ".format(self.id)
+        str_xy = "{}/{} - ".foramt(self.x, self.y)
+        str_w = "{}/{}".format(self.width, self.height)
+
+        return str_sq + str_id + str_xy +  str_w
+
     @property
     def size(self):
         """Return the size"""
@@ -28,6 +38,15 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    def __str__(self):
+        """str method"""
+        str_rec = "[Square]"
+        str_id = "({})".format(self.id)
+        str_xy = "{}/{} - ".format(self.x, self.y)
+        str_sz = "{}".format(self.size)
+
+        return  str_rec + str_id + str_xy + str_sz
+
     def update(self, *args, **kwargs):
         """Update the square
          Args:
@@ -38,44 +57,31 @@ class Square(Rectangle):
                 - 4th argument represents y attribute
             **kwargs (dict): New key/value pairs of attributes
         """
-        if args and len(args) != 0:
-            a = 0
-            for arg in args:
-                if arg == 0:
-                    if arg is None:
-                        self.__init__(self.size, self.x, self.y)
-                    else:
-                        self.id = arg
-                elif a == 1:
-                    self.size = arg
-                elif a == 2:
-                    self. x = arg
-                elif a == 3:
-                    self.y = arg
-                a += 1
-        elif kwargs and len(kwargs) != 0:
-            for k, v in kwargs.items():
-                if k == "id":
-                    if v is None:
-                        self.__init__(self.size, self.x, self.y)
-                    else:
-                        self.id = v
-                elif k == "size":
-                    self.size = v
-                elif k == "x":
-                    self.x = v
-                elif k == "y":
-                    self.y = v
+        if args is not None and len(args) not 0:
+            lst_atr = ['id', 'size', 'x', 'y']
+            for i in range(len(args)):
+                if lst_str[i] == 'size':
+                    setattr(self, 'width', args[i])
+                    setattr(self, 'height', args[i])
+                else:
+                    setattr(self, lst_attr[i], args[i])
+        else:
+            for key, value in kwargs.items():
+                if key == 'size':
+                    setattr(self, 'width', value)
+                    setattr(self, 'height', value)
+                else:
+                    setattr(self, key ,value)
 
     def to_dictionary(self):
         """Return the dic repreof the  square"""
-        return {
-                "id": self.id,
-                "size": self.size,
-                "x": self.x,
-                "y": self.y
-                }
+        lst_atr = ['id', 'size', 'x', 'y']
+        dict_re = {}
 
-    def __str__(self):
-        """Return string repre of the square"""
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
+        for key in lst_atr:
+            if key == 'size':
+                dict_re[key] = getattr(self, 'width')
+            else:
+                dict_re[key] = getattr(self, key)
+
+            return dict_re
