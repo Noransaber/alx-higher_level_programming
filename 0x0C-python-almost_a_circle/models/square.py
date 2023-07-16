@@ -10,16 +10,16 @@ class Square(Rectangle):
         """Make a new square
         Arguments
         =============
-        size: int
-        x: int
-        y:int
-        id: int
+        SIZE: int
+        X: int
+        Y:int
+        ID: int
         """
         super().__init__(size, size, x, y, id)
 
     
     def __str__(self):
-        """ str special method """
+        """STR DUNDER METHOD"""
         str_s = "[Square] "
         str_id = "({}) ".format(self.id)
         str_xy = "{}/{} - ".format(self.x, self.y)
@@ -29,17 +29,17 @@ class Square(Rectangle):
 
     @property
     def size(self):
-        """Return the size"""
+        """GET THE SIZE"""
         return self.width
 
     @size.setter
     def size(self, value):
-        """Update the size"""
+        """UPDATE THE SIZE"""
         self.width = value
         self.height = value
 
     def __str__(self):
-        """ str special method """
+        """ STR DUNDER METHOD """
         str_rectangle = "[Square] "
         str_id = "({}) ".format(self.id)
         str_xy = "{}/{} - ".format(self.x, self.y)
@@ -48,7 +48,7 @@ class Square(Rectangle):
         return str_rectangle + str_id + str_xy + str_size
 
     def update(self, *args, **kwargs):
-        """Update the square
+        """UPDATES THE SQUARE
          Args:
             *args (ints): New attribute values.
                 - 1st argument represents id attribute
@@ -74,7 +74,7 @@ class Square(Rectangle):
                     setattr(self, key ,value)
 
     def to_dictionary(self):
-        """Return the dic repreof the  square"""
+        """REPRESENTATION OF THE DIC"""
         lst_atr = ['id', 'size', 'x', 'y']
         dict_re = {}
 

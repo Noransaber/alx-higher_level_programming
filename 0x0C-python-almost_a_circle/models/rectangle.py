@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-""" Define a new classs"""
+""" DEFINE A NEW CLASS"""
 from models.base import Base
 
 
 class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Init a new rectangle
-        Args
+        """INIT A NEW RECTANGLE
+        ARGS
         ====
         width (int)
         height (int)
@@ -95,7 +95,7 @@ class Rectangle(Base):
             print("")
 
     def __str__(self):
-        """ str method """
+        """STR DUNDER METHOS """
         str_rect = "[Rectangle] "
         str_id = "({}) ".format(self.id)
         str_xy = "{}/{} - ".format(self.x, self.y)
@@ -107,11 +107,11 @@ class Rectangle(Base):
         """Update the rectangle
         Arguments
         ==========
-        1st argument should be the id attribute
-        2nd argument should be the width attribute
-        3rd argument should be the height attribute
-        4th argument should be the x attribute
-        5th argument should be the y attribute
+        1ST argument should be the ID attribute
+        2ND argument should be the WIDTH attribute
+        3RD argument should be the HEIGHT attribute
+        4TH argument should be the X attribute
+        5TH argument should be the Y attribute
         """
         if args is not None and len(args) != 0:
             list_atr = ['id', 'width', 'height', 'x', 'y']
@@ -122,7 +122,7 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
-        """Return dic representation of the rectangle"""
+        """DIC REPRESENTATION"""
         list_atr = ['id', 'width', 'height', 'x', 'y']
         dict_res = {}
 

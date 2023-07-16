@@ -56,8 +56,8 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """
-        returns an instance with
-        all attributes already set:
+        INSTANCE WITH ALL ATTR
+        TO BE set:
         """
 
         if dictionary and dictionary != {}:
@@ -70,7 +70,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """ returns a list of instances"""
+        """ LIST OF INSTANCE"""
         filename = "{}.json".format(cls.__name__)
 
         if os.path.exists(filename) is False:
