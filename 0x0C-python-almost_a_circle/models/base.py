@@ -62,7 +62,7 @@ class Base:
         """
 
         if dictionary and dictionary != {}:
-            if cls.__name == "Rectangle":
+            if cls.__name__ == "Rectangle":
                 new = cls(1, 1)
             else:
                 new = cls(1)
@@ -75,7 +75,9 @@ class Base:
         fn = str(cls.__name__) + ".json"
         try:
             with open(fn, "r") as f:
-                lisr_dicts = Base.from_json_string(f.read())
+                list_dicts = Base.from_json_string(f.read())
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
+            return []
+        except Exception:
             return []

@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Define a square"""
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -14,7 +15,7 @@ class Square(Rectangle):
         y:int
         id: int
         """
-        super().__init__(size, size, id, x, y)
+        super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
@@ -22,7 +23,7 @@ class Square(Rectangle):
         return self.width
 
     @size.setter
-    def size_set(self, value):
+    def size(self, value):
         """Update the size"""
         self.width = value
         self.height = value
@@ -40,10 +41,11 @@ class Square(Rectangle):
         if args and len(args) != 0:
             a = 0
             for arg in args:
-                if arg is None:
-                    self.__init__(self.size, self.x, self.Y)
-                else:
-                    self.id = arg
+                if arg == 0:
+                    if arg is None:
+                        self.__init__(self.size, self.x, self.y)
+                    else:
+                        self.id = arg
                 elif a == 1:
                     self.size = arg
                 elif a == 2:
@@ -68,13 +70,12 @@ class Square(Rectangle):
     def to_dictionary(self):
         """Return the dic repreof the  square"""
         return {
-                "id": slef.id,
-                "size": self.size
-                "x": self.x
+                "id": self.id,
+                "size": self.size,
+                "x": self.x,
                 "y": self.y
                 }
 
     def __str__(self):
         """Return string repre of the square"""
-        return "[Square] ({}) {}/{} - {}"
-    .format(self.id, self.x, self.y, self.width)
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
