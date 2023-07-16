@@ -17,8 +17,8 @@ Unittest for the classes:
 import io
 import sys
 import unittest
-from base import Base
-from square import Square
+from models.base import Base
+from models.square import Square
 
 
 class TestSquare_instantiation(unittest.TestCase):
