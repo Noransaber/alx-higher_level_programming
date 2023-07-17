@@ -17,7 +17,6 @@ class Square(Rectangle):
         """
         super().__init__(size, size, x, y, id)
 
-    
     def __str__(self):
         """STR DUNDER METHOD"""
         str_s = "[Square] "
@@ -71,7 +70,7 @@ class Square(Rectangle):
                     setattr(self, 'width', value)
                     setattr(self, 'height', value)
                 else:
-                    setattr(self, key ,value)
+                    setattr(self, key, value)
 
     def to_dictionary(self):
         """REPRESENTATION OF THE DIC"""
