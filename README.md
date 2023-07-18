@@ -1,8 +1,7 @@
-0x00. Python - Hello, World
+## 0x00. Python - Hello, World
 
 
-Resources
-Read or watch:
+## Resources
 
 The Python tutorial (only the first three chapters below)
 Whetting Your Appetite
@@ -14,7 +13,8 @@ Pycodestyle – Style Guide for Python Code
 Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
-General
+# General
+
 Why Python programming is awesome
 Who created Python
 Who is Guido van Rossum
@@ -59,3 +59,9 @@ In the following examples, the main.c files are shown as examples. You can use t
 The prototypes of all your functions should be included in your header file called lists.h
 Don’t forget to push your header file
 All your header files should be include guarded
+
+
+<div align="center">
+ <img src="python.png">
+</div>
+
