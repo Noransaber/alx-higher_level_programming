@@ -2,7 +2,8 @@
 <div align="center">
  <img src="f2c3ddc494506134937478c1a62dee1b.jpg">
 </div>
-# Learning Python Repository
+
+## Learning Python Repository
 Welcome to the Learning Python repository! This repository is designed to help you learn Python programming from scratch. Whether you're a complete beginner or have some experience with programming, this repository will guide you through the fundamentals of Python and provide various examples and exercises to reinforce your learning.
 
 ## Table of Contents
