@@ -1,0 +1,21 @@
+#!/usr/bin/node
+
+const nums = parseInt(process.argv);
+let i, j, n;
+if (!nums) {
+  console.log(0);
+} else {
+  for (i = 0; i < nums.length ; i++) {
+   let big = 0;
+   if (nums[i] > big)
+	big = nums [i]
+} for (j = 0; j < nums.length; j++) {
+	let small = 0;
+	if (nums[j] < 0)
+	small = nums[j]
+} for (n = 0; i < nums.length; n++) {
+  if (nums[n] > small && nums[n] < big)
+	mid = nums[n];
+}
+console.log(mid) 
+}
