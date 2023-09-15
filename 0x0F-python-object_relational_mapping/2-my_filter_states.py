@@ -14,12 +14,11 @@ if __name__ == "__main__":
         charset="utf8",
     )
     cur = conn.cursor()
-    query = """
-    SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY states.id ASC"""
-    query = query.format(argv[4])
-    cur.execute(query)
-    query_rows = cur.fetchall()
-    for row in query_rows:
+    cursor.execute(
+        "SELECT * FROM states WHERE name='{}' ORDER BY id".format(state_name)
+    )
+    rows = cur.fetchall()
+    for row in rows:
         print(row)
     cur.close()
     conn.close()
