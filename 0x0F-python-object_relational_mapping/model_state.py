@@ -3,13 +3,14 @@
 from sqlalchemy import Column, Integer, String
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
+from model_city import City
+from sqlalchemy.orm import relationship
 
-engine = create_engine()
 Base = declarative_base()
 
 
 class State(Base):
-    """State class inhrit from BASE"""
+    """State class represent state table"""
 
     __tablename__ = "state"
     id = Column(
