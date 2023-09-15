@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""displays all values in the states"""
+"""States's values display"""
 
 import MySQLdb
 from sys import argv
