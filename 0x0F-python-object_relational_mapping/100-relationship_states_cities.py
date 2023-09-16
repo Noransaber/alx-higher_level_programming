@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """reates the State “California” with the City
 “San Francisco” from the database hbtn_0e_100_usa"""
+
 from model_city import City
 from model_state import Base, State
 from sqlalchemy import create_engine
@@ -16,8 +17,8 @@ if __name__ == "__main__":
     session = Session()
     Base.metadata.create_all(engine)
     new_state = State(name="California")
-    new_city = Citr(name="San Francisco")
+    new_city = City(name="San Francisco")
     new_state.append(new_city)
-    session.add_all([new_state, new_city)]
+    session.add_all([new_state, new_cit])
     session.commit()
     session.close()
