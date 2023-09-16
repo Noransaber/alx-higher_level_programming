@@ -1,4 +1,4 @@
-# 0x0F. Python - Object-relational mapping
+# 0x0F. Python - Object-relational mapping💚
 
 ## Resources
 - [Object-relational mappers](https://www.fullstackpython.com/object-relational-mappers-orms.html)🌟
