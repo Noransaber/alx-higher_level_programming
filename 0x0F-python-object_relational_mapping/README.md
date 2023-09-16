@@ -14,7 +14,7 @@
 - [Python Virtual Environments: A primer](https://realpython.com/python-virtual-environments-a-primer/)🐍
 
   # The most preferred site for me :heart:
-  - [tutorialspoint](https://www.tutorialspoint.com/sqlalchemy/sqlalchemy_core_connecting_to_database.htm)
+  - [tutorialspoint](https://www.tutorialspoint.com/sqlalchemy/sqlalchemy_core_connecting_to_database.htm)✌️👏🧑‍💻
  
     # My Blogs :heart: 😍
     - [Getting Started with SQLAlchemy Core for Beginners part1](https://medium.com/@noransaber685/getting-started-with-sqlalchemy-core-for-beginners-part1-73e58ae42e46)
@@ -25,8 +25,8 @@
     
 
 
-# Learning Objectives
-## General
+# Learning Objectives🧑‍💻🤓
+## General🌟
 * Why Python programming is awesome
 * How to connect to a MySQL database from a Python script
 * How to SELECT rows in a MySQL table from a Python script
