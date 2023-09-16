@@ -1,15 +1,15 @@
 # 0x0F. Python - Object-relational mapping
 
 ## Resources
-[Object-relational mappers] (https://intranet.alxswe.com/rltoken/a8DUOWhXpNX3TEwgyT-U8A)
-[mysqlclient/MySQLdb documentation](https://intranet.alxswe.com/rltoken/JtFaKjnqxudr6Hi05Us1Lw)
-[MySQLdb tutorial] (https://intranet.alxswe.com/rltoken/TdUSYFNGbXJG1WjCEoq5FA)
-[10 common stumbling blocks for SQLAlchemy newbies] (https://intranet.alxswe.com/rltoken/YyL5hsscviNH04XGW-XpfA)
-[Python SQLAlchemy Cheatsheet] (https://intranet.alxswe.com/rltoken/dZfUNK3lJicGMK5PU0bE7Q)
-[SQLAlchemy ORM Tutorial for Python Developers] (https://intranet.alxswe.com/rltoken/hNxBKC8lHge5XjsRO8ksHQ)
-[SQLAlchemy Tutorial] (https://intranet.alxswe.com/rltoken/5G_R2NmQRFqiZb84qxYERQ)
-[mysqlclient/MySQLdb] (https://intranet.alxswe.com/rltoken/0zLhY9KqKjn-zmdb7X598Q)
-[Introduction to SQLAlchemy] (https://intranet.alxswe.com/rltoken/pw50Bl1Bj84wksxm018dwA)
-[Flask SQLAlchemy] (https://intranet.alxswe.com/rltoken/B-xIdMtGvpus8vHxAIRrPg)
-[SQLAlchemy](https://intranet.alxswe.com/rltoken/j9azWF2Db_2rNolTxOF3SA)
-[Python Virtual Environments: A primer] (https://intranet.alxswe.com/rltoken/OXle6kXpmD88D0WbgbTWqg)
+Object-relational mappers
+mysqlclient/MySQLdb documentation
+MySQLdb tutorial
+10 common stumbling blocks for SQLAlchemy newbies
+Python SQLAlchemy Cheatsheet
+SQLAlchemy ORM Tutorial for Python Developers
+SQLAlchemy Tutorial
+mysqlclient/MySQLdb
+Introduction to SQLAlchemy
+Flask SQLAlchemy
+SQLAlchemy
+Python Virtual Environments: A primer
