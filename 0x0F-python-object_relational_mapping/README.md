@@ -13,6 +13,17 @@
 - [SQLAlchemy](https://docs.sqlalchemy.org/en/13/)
 - [Python Virtual Environments: A primer](https://realpython.com/python-virtual-environments-a-primer/)
 
+  # The most preferred site for me :heart:
+  - [tutorialspoint](https://www.tutorialspoint.com/sqlalchemy/sqlalchemy_core_connecting_to_database.htm)
+ 
+    # My Blogs :heart:
+    [Getting Started with SQLAlchemy Core for Beginners part1](https://medium.com/@noransaber685/getting-started-with-sqlalchemy-core-for-beginners-part1-73e58ae42e46)
+    [Getting Started with SQLAlchemy Core for Beginners part2](https://medium.com/@noransaber685/getting-started-with-sqlalchemy-core-for-beginners-part1-28cb26a3d013)
+    [Getting Started with SQLAlchemy Core for Beginners part3](https://medium.com/@noransaber685/getting-started-with-sqlalchemy-core-for-beginners-part2-5d8f9becad3f)
+    [Getting Started with SQLAlchemy Core for Beginners part4](https://medium.com/@noransaber685/getting-started-with-sqlalchemy-core-for-beginners-244b65d56c3)
+    [Getting Started with SQLAlchemy Core for Beginners part5](https://medium.com/@noransaber685/getting-started-with-sqlalchemy-core-for-beginners-part5-cb2439ce9292)
+    
+
 
 # Learning Objectives
 ## General
