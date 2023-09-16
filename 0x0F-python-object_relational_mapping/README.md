@@ -1,18 +1,17 @@
 # 0x0F. Python - Object-relational mapping
 
 ## Resources
-[Object-relational mappers](https://www.fullstackpython.com/object-relational-mappers-orms.html)
-[mysqlclient/MySQLdb documentation](https://mysqlclient.readthedocs.io/)
-[MySQLdb tutorial](https://intranet.alxswe.com/projects/283)
-[10 common stumbling blocks for SQLAlchemy newbies](http://alextechrants.blogspot.com/2013/11/10-common-stumbling-blocks-for.html)
-[Python SQLAlchemy Cheatsheet](https://www.pythonsheets.com/notes/python-sqlalchemy.html)
-[SQLAlchemy ORM Tutorial for Python Developers](https://auth0.com/blog/sqlalchemy-orm-tutorial-for-python-developers/)
-[SQLAlchemy Tutorial](https://docs.sqlalchemy.org/en/13/orm/tutorial.html)
-
-[Introduction to SQLAlchemy](https://www.youtube.com/watch?v=woKYyhLCcnU)
-[Flask SQLAlchemy](https://www.youtube.com/playlist?list=PLXmMXHVSvS-BlLA5beNJojJLlpE0PJgCW)
-[SQLAlchemy](https://docs.sqlalchemy.org/en/13/)
-[Python Virtual Environments: A primer](https://realpython.com/python-virtual-environments-a-primer/)
+- [Object-relational mappers](https://www.fullstackpython.com/object-relational-mappers-orms.html)
+- [mysqlclient/MySQLdb documentation](https://mysqlclient.readthedocs.io/)
+- [MySQLdb tutorial](https://intranet.alxswe.com/projects/283)
+- [10 common stumbling blocks for SQLAlchemy newbies](http://alextechrants.blogspot.com/2013/11/10-common-stumbling-blocks-for.html)
+- [Python SQLAlchemy Cheatsheet](https://www.pythonsheets.com/notes/python-sqlalchemy.html)
+- [SQLAlchemy ORM Tutorial for Python Developers](https://auth0.com/blog/sqlalchemy-orm-tutorial-for-python-developers/)
+- [SQLAlchemy Tutorial](https://docs.sqlalchemy.org/en/13/orm/tutorial.html)
+- [Introduction to SQLAlchemy](https://www.youtube.com/watch?v=woKYyhLCcnU)
+- [Flask SQLAlchemy](https://www.youtube.com/playlist?list=PLXmMXHVSvS-BlLA5beNJojJLlpE0PJgCW)
+- [SQLAlchemy](https://docs.sqlalchemy.org/en/13/)
+- [Python Virtual Environments: A primer](https://realpython.com/python-virtual-environments-a-primer/)
 
 
 # Learning Objectives
