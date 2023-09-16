@@ -12,6 +12,10 @@ Base = declarative_base()
 class State(Base):
     """
         Oure state class.
+        Attribute: table name
+        id: integer, unique key
+        name: String
+        cities: Relationship with the other table
     """
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True)
