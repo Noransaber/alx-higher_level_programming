@@ -17,8 +17,9 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    cities = session.query(City).all()
+    rows = session.query(State).all()
 
-    for city in cities:
-        print("{}: {} -> {}".format(city.id, city.name, state.name))
+    for state in rows:
+        for city in state.cities:
+            print("{}: {} -> {}".format(city.id, city.name, state.name))
     session.close()
