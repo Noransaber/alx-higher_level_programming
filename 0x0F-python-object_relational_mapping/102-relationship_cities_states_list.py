@@ -2,7 +2,7 @@
 """
 Lists all City objects from the database hbtn_0e_101_usa
 """
-from sys import ar
+from sys import argv
 from relationship_state import Base, State
 from relationship_city import City
 from sqlalchemy import create_engine
@@ -10,8 +10,10 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm import query
 
 if __name__ == "__main__":
-    url = "mysql+mysqldb://{}:{}@localhost:3306/{}"
-    engine = create_engine(url.format(ar[1], ar[2], ar[3]), pool_pre_ping=True)
+    engine = create_engine(
+        "mysql+mysqldb://{}:{}@localhost:3306/{}".format(argv[1], argv[2], argv[3]),
+        pool_pre_ping=True,
+    )
 
     Session = sessionmaker(bind=engine)
     session = Session()
