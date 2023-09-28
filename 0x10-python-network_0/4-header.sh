@@ -1,3 +1,3 @@
 #!/bin/bash
 # cURL headers
-curl -sX GET $1 -H "X-HolbertonSchool-User-Id: 98" -L
+curl -sH "X-School-User-Id: 98" "$1"
