@@ -1,3 +1,3 @@
 #!/bin/bash
-#cURL only methods
-curl -sI ALLOW $1 -L | grep "ALLOW" | cut -d " " -f2-
+# takes url
+curl -Is "$1" | grep "Allow: " | cut -d ' ' -f 2-
