@@ -14,6 +14,7 @@ request(fullUrl, (error, response, body) => {
       request(characterUrl, (error, response, body) => {
         if (!error) {
           const charName = JSON.parse(body).name;
+
           characterNames.push(charName);
         }
         charactersProcessed++;
