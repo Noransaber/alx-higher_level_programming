@@ -5,7 +5,7 @@ const stringToWrite = process.argv[3];
 
 const fs = require('fs');
 
-fs.writeFile(file, stringToWrite, (error, data) => {
+fs.writeFile(file, stringToWrite, 'utf-8', (error, data) => {
   if (error) {
     console.error(error);
   }
